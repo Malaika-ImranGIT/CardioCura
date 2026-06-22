@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CardioCura</title>
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="./static/css/mstyle.css" />
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="theme-color" content="#e74c3c">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  </head>
+  <body>
+    <!-- header navbar section start -->
+    <header>
+      <a href="#" class="logo">
+        <img src="./static/images/logo.jpg" alt="CardioCura Logo" class="logo-img" />
+        <span>C</span>ardioCura
+      </a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/patient">Patient</a></li>
+          <li><a href="/doctor">Doctor</a></li>
+          <li><a href="/medibot">Medibot</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="fas fa-bars"></div>
+    </header>
+    <!-- header navbar section end -->
+
+<!-- card section start  -->
+
+    <section id="doctor" class="doctor">
+
+        <div class="container">
+            <h1 class="heading">Doctors</h1>
+            <h3 class="title">Our Professional Doctors</h3>
+
+            <div class="box-container">
+
+                <!-- start here  -->
+                <div class="box">
+                    <img src="./static/images/doctor-1.jpg" alt="">                
+                    
+                    <div class="content">
+                        <a href="#">
+                            <h2>Muhammad Ali</h2>
+                        </a>
+                        <p>Professional Cardiologist</p>
+
+                        <!-- card icons  -->
+                        <div class="icons">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end here  -->
+
+                 <!-- start here  -->
+                 <div class="box">
+                    <img src="./static/images/doctor-2.jpg" alt="">                
+                    
+                    <div class="content">
+                        <a href="#">
+                            <h2>Ayezah Kanwal</h2>
+                        </a>
+                        <p>Professional Cardiologist</p>
+
+                        <!-- card icons  -->
+                        <div class="icons">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end here  -->
+
+                 <!-- start here  -->
+                 <div class="box">
+                    <img src="./static/images/doctor-3.jpg" alt="">                
+                    
+                    <div class="content">
+                        <a href="#">
+                            <h2>John Doe</h2>
+                        </a>
+                        <p>Professional Cardiologist</p>
+
+                        <!-- card icons  -->
+                        <div class="icons">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end here  -->
+
+            </div>
+        </div>
+    </section>
+    <!-- card section end  -->
+
+
+    <!-- footer section start -->
+     <section class="footer">
+      <div class="box">
+        <h2 class="logo"><span>C</span>ardioCura</h2>
+        <p>
+            Welcome to CardioCura, where your health and well-being are our top
+            priority. Our dedicated team of professionals is here to provide
+            compassionate & comprehensive care tailored to your individual needs.
+            Whether you're seeking routine check-ups, specialized treatments, or
+            wellness advice, we offer state-of-the-art services in a warm and
+            supportive environment. Your journey to better health starts here —
+            because you deserve the best care every step of the way.
+          </p>
+      </div>
+
+      <div class="box">
+        <h2 class="logo"><span>S</span>hare</h2>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">Whatsapp</a>
+        <a href="#">Printest</a>
+      </div>
+
+      <div class="box">
+        <h2 class="logo"><span>L</span>inks</h2>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/doctor">Doctor</a>
+        <a href="/patient">Patient</a>
+        <a href="/medibot">Medibot</a>
+        <a href="/contact">Contact</a>
+        <a href="/blog">Blog</a>
+      </div>
+
+      <h1 class="credit">created by <span> CardioCura </span> | all rights reserved.</h1>
+
+
+
+     </section>
+
+
+       <!-- footer section end -->
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- custom js file link -->
+    <script src="./static/js/main.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+            navigator.serviceWorker.register("/sw.js")
+        });
+    }
+    </script>
+  </body>
+</html>

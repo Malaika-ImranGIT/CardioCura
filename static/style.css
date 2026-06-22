@@ -1,0 +1,667 @@
+body,html{
+	height: auto;
+	min-height: 100%;
+	margin: 0;
+	/* background: rgb(44, 47, 59);
+   background: -webkit-linear-gradient(to right, rgb(40, 59, 34), rgb(54, 60, 70), rgb(32, 32, 43));
+	background: linear-gradient(to right, rgb(38, 51, 61), rgb(50, 55, 65), rgb(33, 33, 78)); */
+    background: url("../images/doc_card.jpg") no-repeat center center/cover;
+    
+}
+
+.chat-wrapper {
+  position: relative;
+  background: rgb(139, 171, 182);
+  padding: 8rem 2rem 4rem 2rem;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  min-height: 100vh;
+  display: block; /* <-- THIS IS THE KEY FIX */
+}
+
+/* header navbar section */
+header {
+  width: 96%;
+  background: var(--weight);
+  position: fixed;                    /* Make it fixed */
+  top: 0;                             /* Stick to top */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;               /* Smaller padding = smaller height */
+  z-index: 1000;                      /* Ensure it stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Optional subtle shadow */
+}
+
+
+header a {
+  color: var(--black);
+}
+
+header a:hover {
+  color: var(--blue);
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--black);
+  text-transform: none;
+
+}
+
+.logo-img {
+  height: 35px;
+  width: auto;
+}
+
+
+header .logo span {
+  color: var(--blue);
+}
+
+header .navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+header .navbar ul li {
+  margin: 0 1rem;
+}
+
+header .navbar ul li a {
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+header .navbar ul li a:hover {
+  color: var(--blue);
+}
+
+header .fa-bars {
+  font-size: 3rem;
+  color: var(--blue);
+  cursor: pointer;
+  display: none;
+}
+
+.header-active {
+  top: 0;
+  width: 100%;
+  box-shadow: 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.chat{
+	margin-top: 2rem;
+	margin-bottom: 5rem;
+}
+.card{
+	height: 500px;
+	border-radius: 15px !important;
+	background-color: rgba(0, 0, 0, 0.552) !important;
+}
+.contacts_body{
+	padding:  0.75rem 0 !important;
+	overflow-y: auto;
+	white-space: nowrap;
+}
+.msg_card_body{
+	overflow-y: auto;
+}
+.card-header{
+	border-radius: 15px 15px 0 0 !important;
+	border-bottom: 0 !important;
+}
+.card-footer{
+border-radius: 0 0 15px 15px !important;
+	border-top: 0 !important;
+	
+}
+.container{
+	align-content: center;
+}
+.search{
+	border-radius: 15px 0 0 15px !important;
+	background-color: rgba(0,0,0) !important;
+	border:0 !important;
+	color:white !important;
+}
+.search:focus{
+	 box-shadow:none !important;
+   outline:0px !important;
+}
+.type_msg{
+	background-color: rgba(0,0,0,0.3) !important;
+	border:0 !important;
+	color:white !important;
+	height: 50px !important;
+	overflow-y: auto;
+	font-size: 1.5rem !important;
+	text-transform: none !important;
+}
+	.type_msg:focus{
+	 box-shadow:none !important;
+   outline:0px !important;
+}
+/* Camera Button: Round on Left, Flat on Right */
+.attach_btn {
+    border-radius: 15px 0 0 15px !important; /* Top-left, Top-right, Bottom-right, Bottom-left */
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+	height: 50px !important;
+}
+/* Send Button: Flat on Left, Round on Right */
+.send_btn {
+    border-radius: 0 15px 15px 0 !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+	height: 50px !important;
+	width: 40px !important;
+}
+.search_btn{
+	border-radius: 0 15px 15px 0 !important;
+	background-color: rgba(0,0,0,0.3) !important;
+	border:0 !important;
+	color: white !important;
+	cursor: pointer;
+	height: 40px !important;
+}
+
+.attach_btn i,
+.send_btn i {
+    font-size: 1.8rem; /* Increase icon size */
+}
+
+.msg_cotainer, 
+.msg_cotainer_send {
+    text-transform: none !important;
+	font-size: 1.5rem !important;
+} 
+.contacts{
+	list-style: none;
+	padding: 0;
+}
+.contacts li{
+	width: 100% !important;
+	padding: 5px 10px;
+	margin-bottom: 15px !important;
+}
+.active{
+	background-color: rgba(0,0,0,0.3);
+}
+.user_img{
+	height: 70px;
+	width: 70px;
+	border:1.5px solid #f5f6fa;
+
+}
+.user_img_msg{
+	height: 40px;
+	width: 40px;
+	border:1.5px solid #f5f6fa;
+
+}
+.img_cont{
+	position: relative;
+	height: 70px;
+	width: 70px;
+}
+.img_cont_msg{
+	height: 40px;
+	width: 40px;
+}
+.online_icon{
+	position: absolute;
+	height: 15px;
+	width:15px;
+	background-color: #4cd137;
+	border-radius: 50%;
+	bottom: 0.2em;
+	right: 0.4em;
+	border:1.5px solid white;
+}
+.offline{
+	background-color: #c23616 !important;
+}
+.user_info{
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 15px;
+}
+.user_info span{
+	font-size: 20px;
+	color: white;
+}
+.user_info p{
+	font-size: 10px;
+	color: rgba(255,255,255,0.6);
+}
+.video_cam{
+	margin-left: 50px;
+	margin-top: 5px;
+}
+.video_cam span{
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+.msg_cotainer{
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 10px;
+	border-radius: 25px;
+	background-color: rgb(82, 172, 255);
+	padding: 10px;
+	position: relative;
+}
+.msg_cotainer_send{
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 10px;
+	border-radius: 25px;
+	background-color: #58cc71;
+	padding: 10px;
+	position: relative;
+}
+.msg_time{
+	position: absolute;
+	left: 0;
+	bottom: -15px;
+	color: rgba(255,255,255,0.5);
+	font-size: 10px;
+}
+.msg_time_send{
+	position: absolute;
+	right:0;
+	bottom: -15px;
+	color: rgba(255,255,255,0.5);
+	font-size: 10px;
+}
+.msg_head{
+	position: relative;
+}
+#action_menu_btn{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+}
+.action_menu{
+	z-index: 1;
+	position: absolute;
+	padding: 15px 0;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	border-radius: 15px;
+	top: 30px;
+	right: 15px;
+	display: none;
+}
+.action_menu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.action_menu ul li{
+	width: 100%;
+	padding: 10px 15px;
+	margin-bottom: 5px;
+}
+.action_menu ul li i{
+	padding-right: 10px;
+}
+.action_menu ul li:hover{
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.2);
+}
+@media(max-width: 576px){
+	.contacts_card{
+	margin-bottom: 15px !important;
+}
+}
+
+/* ── MIC BUTTON ───────────────────────────────── */
+.mic_btn {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+    height: 50px !important;
+    width: 45px !important;
+    border-radius: 0 !important;   /* flat — sits between input and send */
+    transition: background-color 0.2s ease;
+}
+
+.mic_btn:hover {
+    background-color: rgba(231, 76, 60, 0.6) !important;
+}
+
+/* When actively recording */
+.mic_btn.recording {
+    background-color: rgba(231, 76, 60, 0.9) !important;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.mic_btn i {
+    font-size: 1.6rem;
+}
+
+
+/* footer section start */
+
+.footer{
+    background: var(--black);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.footer .box{
+  width: 30rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+
+.footer .box:nth-child(1){
+  text-align: left;
+
+}
+
+/* logo */
+
+.footer .box .logo{
+  padding: 2rem 0;
+  font-size: 3rem;
+  color: var(--weight);
+}
+
+.footer .box .logo:hover{
+  color: var(--blue);
+}
+
+.footer .box .logo span{
+  color: var(--blue);
+}
+
+.footer .box p{
+  font-size: 1.3rem;
+  color: var(--weight);
+  
+}
+
+.footer .box a{
+  color: var(--weight);
+  font-size: 1.3rem;
+  display: block;
+  margin: .2rem 0;
+}
+
+.footer .box a:hover{
+  text-decoration: underline;
+}
+
+.footer .credit{
+  width: 85%;
+  padding-top: 1rem;
+  font-size: 1.7rem;
+  color: var(--weight);
+  text-align: center;
+  border-top: .2rem solid var(--weight);
+}
+
+.footer .credit span{
+  color: var(--blue);
+  text-decoration: underline;
+  /* letter-spacing: .5rem; */
+}
+
+/* footer section end */
+
+
+/* Urdu Support */
+.urdu-font {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* Ensure the bot messages look correct in RTL */
+.urdu-font .msg_cotainer {
+    text-align: right;
+    width: 100%;
+}
+
+.urdu-font .msg_cotainer_send {
+    text-align: left; /* User messages stay left in RTL to differentiate */
+}
+
+/* Style for the selectors in the header */
+.lang-selection-container select {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.lang-selection-container select option {
+    background: #2c2f3b;
+    color: white;
+}
+
+/* Standard RTL support for Urdu, Punjabi, and Saraiki */
+.rtl-mode .card-body {
+    direction: rtl !important;
+    text-align: right !important;
+}
+.rtl-mode .msg_cotainer_send {
+    text-align: right; /* User messages stay left in RTL to differentiate */
+}
+
+
+.rtl-mode {
+    direction: rtl !important;
+    text-align: right !important;
+/* Prioritize common Pakistani Urdu/Shahmukhi fonts */
+    font-family: 'Jameel Noori Nastaleeq', 'Nafees Web Naskh', 'Urdu Typesetting', 'Simplified Arabic', serif !important;
+}
+
+/* Ensure the bot messages look correct in RTL */
+.rtl-mode .msg_cotainer {
+    text-align: right;
+    width: 100%;
+}
+
+.rtl-mode .msg_cotainer_send {
+    text-align: right; /* User messages stay left in RTL to differentiate */
+	direction: rtl !important;
+}
+
+.rtl-mode .msg_cotainer, 
+.rtl-mode .msg_cotainer_send {
+	text-align: right;
+    line-height: 2.5rem; /* Nastaliq requires more vertical space */
+    font-size: 1.2rem !important;
+    word-spacing: 2px;
+}
+
+/* Fix for specific container alignment in RTL */
+.rtl-mode .msg_cotainer_send {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   MOBILE RESPONSIVE — MEDIBOT CHATBOT
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+    /* Make chat fill full screen on mobile */
+    .chat-wrapper {
+        padding: 5rem 0.5rem 0.5rem 0.5rem !important;
+    }
+
+    .chat {
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Card takes full screen height */
+    .card {
+        height: calc(100vh - 7rem) !important;
+        border-radius: 10px !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Chat body scrollable */
+    .msg_card_body {
+        flex: 1;
+        overflow-y: auto !important;
+        padding: 1rem !important;
+    }
+
+    /* Header — stack language dropdowns on small screens */
+    .card-header .d-flex {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .lang-selection-container {
+        flex-wrap: wrap !important;
+        gap: 5px !important;
+        margin-left: 0 !important;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .lang-selection-container select {
+        font-size: 1.1rem !important;
+        padding: 2px 4px !important;
+        flex: 1;
+    }
+
+    /* User info smaller on mobile */
+    .user_info span {
+        font-size: 15px !important;
+    }
+
+    .user_info p {
+        font-size: 9px !important;
+    }
+
+    .user_img {
+        height: 45px !important;
+        width: 45px !important;
+    }
+
+    .img_cont {
+        height: 45px !important;
+        width: 45px !important;
+    }
+
+    /* Message bubbles full width */
+    .msg_cotainer {
+        max-width: 80vw;
+        font-size: 1.3rem !important;
+        word-break: break-word;
+    }
+
+    .msg_cotainer_send {
+        max-width: 80vw;
+        font-size: 1.3rem !important;
+        word-break: break-word;
+    }
+
+    .user_img_msg {
+        height: 30px !important;
+        width: 30px !important;
+    }
+
+    .img_cont_msg {
+        height: 30px !important;
+        width: 30px !important;
+    }
+
+    /* Footer input bar — full width */
+    .card-footer {
+        padding: 0.5rem !important;
+    }
+
+    .input-group {
+        flex-wrap: nowrap !important;
+    }
+
+    .type_msg {
+        font-size: 1.3rem !important;
+        height: 45px !important;
+    }
+
+    .attach_btn {
+        height: 45px !important;
+        padding: 0 10px !important;
+    }
+
+    .mic_btn {
+        height: 45px !important;
+        width: 40px !important;
+    }
+
+    .send_btn {
+        height: 45px !important;
+        width: 38px !important;
+    }
+
+    /* Fix navbar header on mobile */
+    header {
+        width: 100% !important;
+        padding: 0.5rem !important;
+    }
+
+    /* Hide desktop navbar on mobile — hamburger handles it */
+    header .fa-bars {
+        display: block !important;
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+
+    .lang-selection-container select {
+        font-size: 1rem !important;
+    }
+
+    .msg_cotainer,
+    .msg_cotainer_send {
+        max-width: 85vw;
+        font-size: 1.2rem !important;
+    }
+
+    .type_msg {
+        font-size: 1.2rem !important;
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CardioCura</title>
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="./static/css/mstyle.css" />
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="theme-color" content="#e74c3c">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  </head>
+  <body>
+    <!-- header navbar section start -->
+    <header>
+      <a href="#" class="logo">
+        <img src="./static/images/logo.jpg" alt="CardioCura Logo" class="logo-img" />
+        <span>C</span>ardioCura
+      </a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/patient">Patient</a></li>
+          <li><a href="/doctor">Doctor</a></li>
+          <li><a href="/medibot">Medibot</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="fas fa-bars"></div>
+    </header>
+    <!-- header navbar section end -->
+        <!-- review section start  -->
+
+    <section id="review" class="review">
+
+        <h1 class="heading">our patient review</h1>
+        <h3 class="title">what patient says about us</h3>
+
+        <div class="box-container">
+
+            <!-- start here  -->
+            <div class="box">
+                <i class="fas fa-quote-left"></i>
+                <p>Efficient Diagnostic Care<br>
+"The diagnostic process at CardioCura was remarkably smooth and professional. From the initial screening to the detailed heart health assessment, the staff ensured I understood every step of my treatment plan. I felt truly supported by a team that prioritizes both advanced technology and patient comfort."</p>
+
+                <div class="images">
+                    <img src="./static/images/img-1.jpg" alt="">
+
+                    <div class="info">
+                        <h3>Ayesha Ali</h3>
+                        <span>date : 11-08-2025</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end here  -->
+
+            
+            <!-- start here  -->
+            <div class="box">
+                <i class="fas fa-quote-left"></i>
+                <p>Personalized Recovery Experience<br>
+"Recovering from a cardiac event is daunting, but the personalized attention I received here made all the difference. The doctors took the time to explain my medication and lifestyle adjustments in simple terms, which gave me the confidence to manage my recovery at home. It’s rare to find a hospital that feels this attentive."</p>
+
+                <div class="images">
+                    <img src="./static/images/img-2.jpg" alt="">
+
+                    <div class="info">
+                        <h3>Akram Khan</h3>
+                        <span>date : 10-12-2025</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end here  -->
+
+            
+            <!-- start here  -->
+            <div class="box">
+                <i class="fas fa-quote-left"></i>
+                <p>Seamless Integration of Care<br>
+"What stood out most during my stay was the seamless coordination between the specialists and the nursing staff. Every department was on the same page regarding my history and progress, making the entire experience stress-free. I highly recommend CardioCura for anyone seeking reliable and compassionate heart care."</p>
+
+                <div class="images">
+                    <img src="./static/images/img-3.jpg" alt="">
+
+                    <div class="info">
+                        <h3>Saif ur Rehman</h3>
+                        <span>date : 21-07-2025</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end here  -->
+        </div>
+    </section>
+    <!-- review section end  -->
+
+    <!-- footer section start -->
+     <section class="footer">
+      <div class="box">
+        <h2 class="logo"><span>C</span>ardioCura</h2>
+        <p>
+            Welcome to CardioCura, where your health and well-being are our top
+            priority. Our dedicated team of professionals is here to provide
+            compassionate & comprehensive care tailored to your individual needs.
+            Whether you're seeking routine check-ups, specialized treatments, or
+            wellness advice, we offer state-of-the-art services in a warm and
+            supportive environment. Your journey to better health starts here —
+            because you deserve the best care every step of the way.
+          </p>
+      </div>
+
+      <div class="box">
+        <h2 class="logo"><span>S</span>hare</h2>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">Whatsapp</a>
+        <a href="#">Printest</a>
+      </div>
+
+      <div class="box">
+        <h2 class="logo"><span>L</span>inks</h2>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="doctor.html">Doctor</a>
+        <a href="patient.html">Patient</a>
+        <a href="chat.html">Medibot</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+      </div>
+
+      <h1 class="credit">created by <span> CardioCura </span> | all rights reserved.</h1>
+
+
+
+     </section>
+
+
+       <!-- footer section end -->
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- custom js file link -->
+    <script src="./static/js/main.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+            navigator.serviceWorker.register("/sw.js")
+        });
+    }
+    </script>
+  </body>
+</html>

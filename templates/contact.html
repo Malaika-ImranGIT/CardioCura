@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CardioCura</title>
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="./static/css/mstyle.css" />
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="theme-color" content="#e74c3c">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  </head>
+  <body>
+    <!-- header navbar section start -->
+    <header>
+      <a href="#" class="logo">
+        <img src="./static/images/logo.jpg" alt="CardioCura Logo" class="logo-img" />
+        <span>C</span>ardioCura
+      </a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/patient">Patient</a></li>
+          <li><a href="/doctor">Doctor</a></li>
+          <li><a href="/medibot">Medibot</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="fas fa-bars"></div>
+    </header>
+    <!-- header navbar section end -->
+
+    <!-- contact section start  -->
+
+    <section id="contact" class="contact" background="./static/images/doc_card.jpg">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div style="padding: 10px; margin-bottom: 20px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; text-align: center;">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+        <h1 class="heading">Contact Us</h1>
+        <h3 class="title">You can talk to us any times</h3>
+
+        <div class="row">
+
+            <!-- form images  -->
+            <div class="images">
+                <img src="/static/images/form.png" alt="">
+            </div>
+
+            <div class="form-container">    
+                 <form action="/contact" method="POST">
+                   <input type="text" placeholder="Full Name" name="name" required>
+                   <input type="email" placeholder="Enter your Email" name="email" required>
+                   <input type="number" placeholder="Phone Number" name="phone" required>
+                   <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                   <input type="submit" value="send" name="send">
+                 </form>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+
+    <!-- contact section end  -->
+
+    <!-- footer section start -->
+     <section class="footer">
+      <div class="box">
+        <h2 class="logo"><span>C</span>ardioCura</h2>
+        <p>
+            Welcome to CardioCura, where your health and well-being are our top
+            priority. Our dedicated team of professionals is here to provide
+            compassionate & comprehensive care tailored to your individual needs.
+            Whether you're seeking routine check-ups, specialized treatments, or
+            wellness advice, we offer state-of-the-art services in a warm and
+            supportive environment. Your journey to better health starts here —
+            because you deserve the best care every step of the way.
+          </p>
+      </div>
+
+      <div class="box">
+        <h2 class="logo"><span>S</span>hare</h2>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">Whatsapp</a>
+        <a href="#">Printest</a>
+      </div>
+
+      <div class="box">
+        <h2 class="logo"><span>L</span>inks</h2>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/doctor">Doctor</a>
+        <a href="/patient">Patient</a>
+        <a href="/medibot">Medibot</a>
+        <a href="/contact">Contact</a>
+        <a href="/blog">Blog</a>
+      </div>
+
+      <h1 class="credit">created by <span> CardioCura </span> | all rights reserved.</h1>
+
+
+
+     </section>
+
+
+       <!-- footer section end -->
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- custom js file link -->
+    <script src="./static/js/main.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+            navigator.serviceWorker.register("/sw.js")
+        });
+    }
+   </script>
+  </body>
+</html>

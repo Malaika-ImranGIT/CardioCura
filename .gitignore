@@ -1,0 +1,52 @@
+# ── Virtual Environment ────────────────────────────
+venv/
+env/
+.venv/
+
+# ── Python Cache ───────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Trained Models (too large) ────────────────────
+models/*.pkl
+models/*.h5
+*.pkl
+*.h5
+
+# ── ECG Image Dataset (too large) ─────────────────
+data/balanced_augmented_data/abnormal_heartbeat_ecg_images/
+data/balanced_augmented_data/myocardial_infarction_ecg_images/
+data/balanced_augmented_data/normal_ecg_images/
+data/balanced_augmented_data/post_mi_history_ecg_images/
+
+# ── CSV Dataset Files (too large / privacy) ────────
+data/Contact.csv
+data/heart_attack_prediction_dataset.csv
+data/Heart_Disease_description&precautions.csv
+data/heart_diseases&symptoms.csv
+contact.csv
+
+# ── IDE Files ──────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── Environment Variables ──────────────────────────
+.env
+.env.local
+
+# ── Windows Files ──────────────────────────────────
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# ── ngrok ──────────────────────────────────────────
+ngrok.exe
+ngrok
+
+# ── Uploads Folder (temporary files) ──────────────
+uploads/
+*.tmp
