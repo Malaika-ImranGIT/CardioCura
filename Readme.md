@@ -39,7 +39,7 @@ User Input (Text / Voice / ECG Image)
             ↓
     Google Translate API
             ↓
-    Feature Extraction (21 features)
+    Feature Extraction 
             ↓
 ┌───────────────────────────────────┐
 │  Layer 1: Symptom Prediction      │
