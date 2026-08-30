@@ -43,8 +43,8 @@ User Input (Text / Voice / ECG Image)
             ↓
 ┌───────────────────────────────────┐
 │  Layer 1: Symptom Prediction      │
-│  Layer 2: Random Forest + Rules   │
-│  Layer 3: MobileNet ECG Analysis  │
+│  Layer 2: ML Model   │
+│  Layer 3: DL Model  │
 └───────────────────────────────────┘
             ↓
     Risk Assessment Result
