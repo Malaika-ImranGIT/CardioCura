@@ -188,15 +188,11 @@ Download them from the links below and place in correct folders.
 
 ### CSV Datasets — place in `data/` folder
 | File | Download |
-|---|---|
-| heart_attack_prediction_dataset.csv | [Download] https://drive.google.com/file/d/1rPtQL0ztX3y3qrxzJkYo7gqG9kV23gzN/view?usp=sharing |
-| Heart_Disease_description&precautions.csv | [Download] https://drive.google.com/file/d/1epPLoxkHuofCaHmysbdaW4OzgoMD8_6Y/view?usp=sharing |
-| heart_diseases&symptoms.csv | [Download] https://drive.google.com/file/d/1BxLiU0G0POPX46YfvPdrxxiLXmoTo_qW/view?usp=sharing |
+
 
 ### ECG Image Dataset — extract into `data/balanced_augmented_data/`
 | File | Download |
 |---|---|
-| balanced_augmented_data.zip | [Download] https://drive.google.com/file/d/1DYKBbiDy0qUFcxQ8JDaa_CTNQL8XnTgR/view?usp=sharing |
 
 After extracting you should have:
 
@@ -218,8 +214,7 @@ No download needed.
 
 ### ECG Deep Learning Model
 | File | Download |
-|---|---|
-| final_heart_disease_model.h5 | [Download] https://drive.google.com/file/d/1abT2-armE4zVh2_XnDWvvuDzfksmluyN/view?usp=sharing |
+
 
 Place in: `models/final_heart_disease_model.h5`
 
